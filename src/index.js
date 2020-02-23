@@ -35,17 +35,20 @@ function addingBreed(json) {
   let ul = document.getElementById('dog-breeds');
   let breeds = json['message'];
   for (let e in breeds) {
-      let DOM_li = document.createElement("li");
+      let DOM_li = document.createElement('li');
       // extract the empty list
       if(breeds[e] == 0) {
           // do nothing
       } else {
           DOM_li.innerText = breeds[e];
-          ul.appendChild(DOM_li);       
+          ul.appendChild(DOM_li);    
+          /**** Challenge 3 ****/ 
+
+          document.addEventListener("click", function(){
+          DOM_li.style.color = "red";
+          }); 
       }
   }
 }
-
-/**** Challenge 3 ****/ 
 
 
